@@ -1,0 +1,34 @@
+<html>
+<head>
+	<h1> Paragraph Editor </h1>
+</head>
+<body>
+	<label for="colorInput">Enter a color name or hex code:</label>
+	<input type="text" id="colorInput">
+	<button onclick="changeTextColor()">Change</button><br>
+	<label for="widthInput">Enter a width value for the paragraph border:</label>
+	<input type="number" id="widthInput" min = "0">
+	<button onclick="changeParagraphBorder()">Change</button>
+	
+	<p id="textToChange">This text can change color.</p>
+
+	<script>
+		function changeTextColor() {
+			const colorInput = document.getElementById('colorInput').value;
+			const text = document.getElementById('textToChange');
+			text.style.color = colorInput;
+		}
+		function changeParagraphBorder() {
+			var input = document.getElementById("widthInput");
+			var text = document.getElementById("textToChange");
+			var borderWidth = input.value + "px";
+			text.style.border = "solid black" + borderWidth;
+		}
+
+	</script>
+
+
+<body>
+
+
+
